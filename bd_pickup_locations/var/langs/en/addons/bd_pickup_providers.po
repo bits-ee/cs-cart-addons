@@ -9,17 +9,17 @@ msgid "[BergDigital] Pickup providers"
 msgstr "[BergDigital] Pickup providers"
 
 msgctxt "Addons::description::bd_pickup_providers"
-msgid "Pickup points for Itella Smartpost Finland"
+msgid "Pickup points for Itella SmartPOST, Omniva and DPD Pickup in FI/EE/LT/LV"
 msgstr "Pickup points for Itella Smartpost Finland"
 
 msgctxt "Languages::bd_pickup_providers"
-msgid "[BergDigital] Pickup points"
-msgstr "[BergDigital] Pickup points"
-
-msgctxt "Languages::addons.bd_pickup_providers.select_default_text"
-msgid "--- Select pickup point ---"
-msgstr "--- Select pickup point ---"
+msgid "[BergDigital] Pickup service providers"
+msgstr "[BergDigital] Pickup service providers"
 
 msgctxt "Languages::addons.bd_pickup_providers.pickup_provider"
-msgid "Pickup provider"
-msgstr "Pickup provider"
+msgid "Pickup service provider"
+msgstr "Pickup service provider"
+
+msgctxt "Languages::addons.bd_pickup_providers.pickup_point"
+msgid "Pickup point"
+msgstr "Pickup point"
