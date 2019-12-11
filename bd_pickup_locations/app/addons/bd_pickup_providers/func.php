@@ -207,8 +207,7 @@ function fn_bd_pickup_providers_csv2array($url, $callback) {
 }
 
 function fn_bd_pickup_providers_order_by($field, $data) {
-    $code = "return strnatcmp(\$a['$field'], \$b['$field']);";
-    usort($data, create_function('$a,$b', $code));
+    usort($data, function ($a, $b) use ($field) { return strnatcmp($a[$field], $b[$field]); } );
     return $data;
 }
 
