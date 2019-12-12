@@ -46,7 +46,7 @@ function fn_bd_pickup_providers_dpd($country) {
     $optgroup = array();
     $groupkey = 'ORT';
 
-    $csv = fn_bd_pickup_providers_csv2array('ftp://ftp.dpd.ee/parcelshop/psexport_latest.csv', 'fn_bd_pickup_providers_getcsv');
+    $csv = fn_bd_pickup_providers_csv2array(BD_PICKUP_PROVIDERS_SMARTPOST_DPD_URL, 'fn_bd_pickup_providers_getcsv');
     $csv = fn_bd_pickup_providers_order_by($groupkey, $csv);
     $group = $csv[0][$groupkey];
 
@@ -70,7 +70,7 @@ function fn_bd_pickup_providers_dpd($country) {
 }
 
 function fn_bd_pickup_providers_omniva($country, $groupkey) {
-    $json = json_decode(file_get_contents('https://www.omniva.ee/locations.json'), true);
+    $json = json_decode(file_get_contents(BD_PICKUP_PROVIDERS_SMARTPOST_OMNIVA_URL), true);
 
     $body = '';
     $address = '';
@@ -114,7 +114,7 @@ function fn_bd_pickup_providers_smartpost_ee() {
     $optgroup = array();
     $groupkey = 'group_name';
 
-    $csv = fn_bd_pickup_providers_csv2array('https://uus.smartpost.ee/places.csv', 'str_getcsv');
+    $csv = fn_bd_pickup_providers_csv2array(BD_PICKUP_PROVIDERS_SMARTPOST_EE_URL, 'str_getcsv');
     $csv = fn_bd_pickup_providers_order_by($groupkey, $csv);
     $group = $csv[0][$groupkey];
 
@@ -137,7 +137,7 @@ function fn_bd_pickup_providers_smartpost_ee() {
 }
 
 function fn_bd_pickup_providers_smartpost_fi() {
-    $json = json_decode(file_get_contents('http://smartpost.ee/fi_apt.json'), true);
+    $json = json_decode(file_get_contents(BD_PICKUP_PROVIDERS_SMARTPOST_FI_URL), true);
 
     $body = '';
     $optgroup = array();
