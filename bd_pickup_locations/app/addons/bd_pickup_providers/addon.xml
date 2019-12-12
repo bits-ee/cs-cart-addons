@@ -1,13 +1,16 @@
 <?xml version="1.0"?>
-<addon scheme="3.0">
+<addon scheme="2.0">
     <id>bd_pickup_providers</id>
+    <name>[BergDigital.ch] Pickup providers</name>
+    <description>Pickup points for Itella Smartpost, Omniva and DPD</description>
     <version>1.0</version>
     <default_language>en</default_language>
     <priority>9999</priority>
     <status>active</status>
+    <dependencies/>
     <compatibility>
     <php_version>
-        <min>5.4.0</min>
+        <min>5.3.0</min>
     </php_version>
     </compatibility>
     <authors>
@@ -25,4 +28,8 @@
         <item for="uninstall">ALTER TABLE `?:shippings` DROP COLUMN `bd_pickup_provider`;</item>
         <item for="uninstall">ALTER TABLE `?:orders` DROP COLUMN `bd_pickup_provider_data`;</item>
     </queries>
+    <language_variables>
+        <item id="addons.bd_pickup_providers.pickup_provider" lang="en">Pickup service provider</item>
+        <item id="addons.bd_pickup_providers.pickup_point" lang="en">Pickup point</item>
+    </language_variables>
 </addon>

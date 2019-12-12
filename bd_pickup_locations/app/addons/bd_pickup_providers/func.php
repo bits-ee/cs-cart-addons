@@ -3,14 +3,9 @@ if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
 /** HOOKS **/
 
-function fn_bd_pickup_providers_shippings_get_shippings_list_conditions($group, $shippings, &$fields, $join, $condition, $order_by) {
-    $fields[] = "?:shippings.bd_pickup_provider";
-}
-
-
 function fn_bd_pickup_providers_create_order(&$order) {
-    if(isset(Tygh::$app['session']['bd_pickup_provider']) && Tygh::$app['session']['bd_pickup_provider']['shipping_id'] == $order['shipping_ids']) {
-        $order['bd_pickup_provider_data'] = Tygh::$app['session']['bd_pickup_provider']['data'];
+    if(isset($_SESSION['bd_pickup_provider']) && $_SESSION['bd_pickup_provider']['shipping_id'] == $order['shipping_ids']) {
+        $order['bd_pickup_provider_data'] = $_SESSION['bd_pickup_provider']['data'];
     }
 }
 
@@ -186,7 +181,7 @@ function fn_bd_pickup_providers_build_select_option_text($id, $place, $city='', 
     $option_text = $place.$brackets;
 
     $v = json_encode(array('location' => $option_text, 'code' => $id), JSON_UNESCAPED_UNICODE);
-    if(isset(Tygh::$app['session']['bd_pickup_provider']) && Tygh::$app['session']['bd_pickup_provider']['data'] == $v) {
+    if(isset($_SESSION['bd_pickup_provider']) && $_SESSION['bd_pickup_provider']['data'] == $v) {
         $sel = 'selected="selected"';
     } else {
         $sel = '';
