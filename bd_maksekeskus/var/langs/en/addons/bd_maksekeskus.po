@@ -1,0 +1,47 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::bd_maksekeskus"
+msgid "[BergDigital] MakeCommerce Payment Gateway"
+msgstr "[BergDigital] MakeCommerce Payment Gateway"
+
+msgctxt "Addons::description::bd_maksekeskus"
+msgid "Collect payments using Estonian, Latvian, Lithuanian and Finnish bank links, and accept Visa/MasterCard/Maestro cards"
+msgstr "Collect payments using Estonian, Latvian, Lithuanian and Finnish bank links, and accept Visa/MasterCard/Maestro cards"
+
+msgctxt "Languages::bd_maksekeskus.api_settings"
+msgid "API Settings"
+msgstr "API Settings"
+
+msgctxt "Languages::bd_maksekeskus.api_settings_notice"
+msgid "Get data from https://merchant-test.maksekeskus.ee/ and https://merchant.maksekeskus.ee/. 
+Set Return URL to POST to https://your.domain/index.php?dispatch=payment_notification.return&payment=maksekeskus, set Cancel URL to GET to https://your.domain/checkout/, and set Notifications URL to POST to https://your.domain/index.php?dispatch=payment_notification.notify&payment=maksekeskus or leave it empty."
+msgstr "Get data from https://merchant-test.maksekeskus.ee/ and https://merchant.maksekeskus.ee/. 
+Set Return URL to POST to https://your.domain/index.php?dispatch=payment_notification.return&payment=maksekeskus, set Cancel URL to GET to https://your.domain/checkout/, and set Notifications URL to POST to https://your.domain/index.php?dispatch=payment_notification.notify&payment=maksekeskus or leave it empty."
+
+msgctxt "Languages::bd_maksekeskus.shop_id"
+msgid "Shop ID"
+msgstr "Shop ID"
+
+msgctxt "Languages::bd_maksekeskus.api_secret"
+msgid "API Secret Key"
+msgstr "API Secret Key"
+
+msgctxt "Languages::bd_maksekeskus.state_mapping"
+msgid "State to Status Mappings"
+msgstr "State to Status Mappings"
+
+msgctxt "Languages::bd_maksekeskus.state_mapping_notice"
+msgid "Description of Maksekeskus transaction states: https://maksekeskus.ee/arendajale/state-models/"
+msgstr "Description of Maksekeskus transaction states: https://maksekeskus.ee/arendajale/state-models/"
+
+msgctxt "Languages::bd_maksekeskus.state"
+msgid "Transaction State"
+msgstr "Transaction State"
+
+msgctxt "Languages::part_refunded"
+msgid "Refunded (partially)"
+msgstr "Refunded (partially)"
