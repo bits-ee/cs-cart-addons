@@ -17,6 +17,9 @@
             <option value="dpd_lv" {if $shipping.bd_pickup_provider == 'dpd_lv'}selected="selected"{/if}>DPD Pickup Latvia</option>
             <option value="dpd_lt" {if $shipping.bd_pickup_provider == 'dpd_lt'}selected="selected"{/if}>DPD Pickup Lithuania</option>
         </optgroup>
+        <optgroup label="Cargobus">
+            <option value="cargobus_ee" {if $shipping.bd_pickup_provider == 'cargobus_ee'}selected="selected"{/if}>Cargobus Estonia</option>
+        </optgroup>
     </select>
   </div>
 </div>

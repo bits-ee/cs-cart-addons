@@ -1,0 +1,10 @@
+#addon_bd_pickup_providersinstalled .bg-icon, #addon_bd_pickup_providers .bg-icon {
+    background-size: contain;
+    background: transparent url('../../../media/images/addons/bd_pickup_providers/logo.png') no-repeat center;
+    border: none;
+    background-size: 32px 32px;
+}
+
+#addon_bd_pickup_providersinstalled .bg-icon i, #addon_bd_pickup_providers .bg-icon i {
+    display: none;
+}

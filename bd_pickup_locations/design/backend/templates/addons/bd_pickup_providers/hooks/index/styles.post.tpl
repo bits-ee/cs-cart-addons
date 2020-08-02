@@ -1,0 +1,1 @@
+{style src="addons/bd_pickup_providers/styles.css"}
