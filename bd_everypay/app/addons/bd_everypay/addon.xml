@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<addon scheme="4.0">
+    <id>bd_everypay</id>
+    <version>1.0</version>
+    <priority>1000</priority>
+    <position>0</position>
+    <status>active</status>
+    <default_language>en</default_language>
+    <authors>
+        <author>
+            <name>Zahhar Kirillov</name>
+            <email>zahhar@gmail.com</email>
+            <url>https://bergdigital.ch</url>
+        </author>
+  </authors>
+  <supplier>BergDigital.ch</supplier>
+  <supplier_link>https://bergdigital.ch</supplier_link>
+  <queries>
+        <item for="install">INSERT INTO `?:payment_processors` SET `processor` = 'EveryPay', `processor_script` = 'everypay.php', `processor_template` = 'views/orders/components/payments/cc_outside.tpl', `admin_template` = 'everypay.tpl', `callback` = 'N', `type` = 'P', `addon` = 'bd_everypay';</item>
+        <item for="uninstall">DELETE FROM `?:payment_processors` WHERE `addon` = 'bd_everypay';</item>
+  </queries>
+</addon>

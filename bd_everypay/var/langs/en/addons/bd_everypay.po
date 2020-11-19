@@ -1,0 +1,21 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::bd_everypay"
+msgid "[BergDigital] Every-pay.com payment gateway"
+msgstr "[BergDigital] Every-pay.com payment gateway"
+
+msgctxt "Addons::description::bd_everypay"
+msgid "Collect EE/LT/LV open banking and credit card payments using redirect integration with one-off payment API v3"
+msgstr "Collect EE/LT/LV open banking and credit card payments using redirect integration with one-off payment API v3"
+
+msgctxt "Languages::bd_everypay.api_settings"
+msgid "API Settings"
+msgstr "API Settings"
+
+msgctxt "Languages::bd_everypay.api_settings_notice"
+msgid "On Every-Pay.eu Merchant Portal: 1) Copy from General Settings: API username, API secret and Processing account name; 2. Set in E-Shop settings: Callback Notification URL to https://your.domain/index.php?dispatch=payment_notification.notify&payment=everypay"
+msgstr "On Every-Pay.eu Merchant Portal: 1) Copy from General Settings: API username, API secret and Processing account name; 2. Set in E-Shop settings: Callback Notification URL to https://your.domain/index.php?dispatch=payment_notification.notify&payment=everypay"
