@@ -14,11 +14,11 @@
         <author>
             <name>Zahhar Kirillov</name>
             <email>zahhar@gmail.com</email>
-            <url>https://bergdigital.ch</url>
+            <url>https://bits.ee</url>
         </author>
     </authors>
-    <supplier>BergDigital.ch</supplier>
-    <supplier_link>https://bergdigital.ch</supplier_link>
+    <supplier>Baltic IT Solutions OÜ</supplier>
+    <supplier_link>https://bits.ee</supplier_link>
     <queries>
         <item for="install">ALTER TABLE `?:shippings` ADD `bd_pickup_provider` varchar(255) NOT NULL DEFAULT "";</item>
         <item for="install">ALTER TABLE `?:orders` ADD `bd_pickup_provider_data` TEXT DEFAULT NULL;</item>

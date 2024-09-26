@@ -14,11 +14,11 @@
         <author>
             <name>Zahhar Kirillov</name>
             <email>zahhar@gmail.com</email>
-            <url>https://bergdigital.ch</url>
+            <url>https://bits.ee</url>
         </author>
   </authors>
-  <supplier>BergDigital.ch</supplier>
-  <supplier_link>https://bergdigital.ch</supplier_link>
+  <supplier>Baltic IT Solutions OÜ</supplier>
+  <supplier_link>https://bits.ee</supplier_link>
   <queries>
         <item for="install">INSERT INTO `?:payment_processors` SET `processor` = 'Maksekeskus', `processor_script` = 'maksekeskus.php', `processor_template` = 'views/orders/components/payments/cc_outside.tpl', `admin_template` = 'maksekeskus.tpl', `callback` = 'N', `type` = 'P', `addon` = 'bd_maksekeskus';</item>
         <item for="uninstall">DELETE FROM `?:payment_processors` WHERE `addon` = 'bd_maksekeskus';</item>

@@ -85,21 +85,20 @@ function fn_bd_pickup_providers_cargobus_ee() {
 }
 
 function fn_bd_pickup_providers_dpd($country, $firstgroup) {
-    //'PUDO ID' = EE90 -> automaat; EE91 -> robot; EE10 -> pakipood;
+    $json = json_decode(file_get_contents(BD_PICKUP_PROVIDERS_DPD_URL), true);
 
     $body = '';
     $optgroup = array();
-    $groupkey = 'ORT';
+    $groupkey = 'city';
     $firstgroup = $firstgroup;
     $firstoptgroup_html = '';
 
-    $csv = fn_bd_pickup_providers_csv2array(BD_PICKUP_PROVIDERS_DPD_URL, 'fn_bd_pickup_providers_getcsv');
-    $csv = fn_bd_pickup_providers_order_by($groupkey, $csv);
-    $csv[] = array($groupkey => null, 'PUDO ID' => $country); //adding fake group to the end, it is a hack to display the real last group    
-    $group = $csv[0][$groupkey];
+    $json = fn_bd_pickup_providers_order_by($groupkey, $json);
+    $json[] = array($groupkey => null, 'countryCode' => $country); //adding fake group to the end, it is a hack to display the real last group    
+    $group = $json[0][$groupkey];
 
-    foreach ($csv as $key => $dest) {
-        if(stristr($dest['PUDO ID'], $country) !== FALSE) {
+    foreach ($json as $key => $dest) {
+        if(stristr($dest['countryCode'], $country) !== FALSE) {
             if($group != $dest[$groupkey] && count($optgroup) > 0) {
                 sort($optgroup); //soft by option visible text
                 $optgroup_html = '<optgroup label="'.$group.'">'.implode($optgroup).'</optgroup>';
@@ -114,7 +113,7 @@ function fn_bd_pickup_providers_dpd($country, $firstgroup) {
                 $group = $dest[$groupkey];
             }
 
-            $optgroup[] = fn_bd_pickup_providers_build_select_option_text($dest['ID_PAKETSHOP'], $dest['Firma'], $dest['ORT'], $dest['Straße Hausnummer'], $dest['PLZ']);
+            $optgroup[] = fn_bd_pickup_providers_build_select_option_text($dest['parcelShopId'], $dest['companyShortName'], $dest['city'], $dest['street'], $dest['zipCode']);
         }
     }
 
@@ -290,8 +289,4 @@ function fn_bd_pickup_providers_csv2array($url, $callback) {
 function fn_bd_pickup_providers_order_by($field, $data) {
     usort($data, function ($a, $b) use ($field) { return strnatcmp($a[$field], $b[$field]); } );
     return $data;
-}
-
-function fn_bd_pickup_providers_getcsv($s) {
-    return str_getcsv(utf8_encode($s), '|'); //for DPD only that uses ISO endiding and custom delimiter
 }
